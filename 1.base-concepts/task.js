@@ -12,13 +12,14 @@ function solveEquation(a, b, c) {
   } else if (d > 0) {
     firstRoot = (-b + Math.sqrt(d)) / (2 * a);
     secondRoot = (-b - Math.sqrt(d)) / (2 * a)
-    arr = [firstRoot.secondRoot];
+    arr = [firstRoot, secondRoot];
   }
   return arr;
 }
+/*console.log(solveEquation(2, 500, 4))
 
 
-"use strict";
+/*"use strict";
 function calculateTotalMortgage(percent, contribution, amount, date) {
   let totalAmount;
   let betMonth;
@@ -38,4 +39,4 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
 
   return totalAmount;
 
-  console.log(totalAmount) 
+  console.log(totalAmount) */
