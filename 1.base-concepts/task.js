@@ -1,12 +1,11 @@
 "use strict";
 function solveEquation(a, b, c) {
-  let arr;
+  let arr = [];
   let firstRoot;
   let secondRoot;
   const d = b ** 2 - 4 * a * c;
-  if (d < 0) {
-    arr = [];
-  } else if (d === 0) {
+
+  if (d === 0) {
     firstRoot = -b / (2 * a);
     arr = [firstRoot];
   } else if (d > 0) {
