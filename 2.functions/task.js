@@ -1,4 +1,4 @@
-// Задание 1
+
 'use strict';
 
 function getArrayParams(myarr = [1, 5, 6, 2, 3]) {
@@ -20,11 +20,6 @@ function getArrayParams(myarr = [1, 5, 6, 2, 3]) {
   avg = + (sum / myarr.length).toFixed(2);
   return { min, max, avg };
 }
-getArrayParams();
-
-
-
-// Задание 2
 
 function worker(arr) {
   let sum = 0;
@@ -45,22 +40,10 @@ function makeWork(arrOfArr, func) {
   return max;
 }
 
-/*console.log(worker([1, 2, 3])); // 6
-console.log(worker([4, 5, 6])); // 15
-let arrOfArr = [[1, 2, 3], [4, 5, 6]];
-*/
-makeWork(arrOfArr, worker);
-
-
-// Задание 3
 
 function worker2(arr) {
-  let max = 0;
-  let min = 0;
-  let difference = 0;
-  difference = Math.max(...arr) - Math.min(...arr);
 
-  return Math.abs(difference);
+  return Math.abs(Math.max(...arr) - Math.min(...arr));
 }
 function makeWork(arrOfArr, func) {
   let max = 0;
@@ -73,9 +56,4 @@ function makeWork(arrOfArr, func) {
   }
   return max;
 }
-/*
-console.log(worker2([-10, -20, -40])); // -40 - (-10) = -30 => 30
-console.log(worker2([10, 20, 30])); // 30 - 10 = 20
-arrOfArr = [[-10, -20, -40], [10, 20, 30]];
-*/
-makeWork(arrOfArr, worker2); // 30
+
