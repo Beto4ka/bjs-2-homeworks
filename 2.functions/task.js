@@ -28,28 +28,15 @@ function worker(arr) {
   }
   return sum;
 }
-function makeWork(arrOfArr, func) {
-  let max = 0;
-  for (let i = 0; i < arrOfArr.length; i++) {
-    worker(arrOfArr[i]);
-    let func = worker(arrOfArr[i]);
-    if (max <= func) {
-      max = func;
-    }
-  }
-  return max;
-}
-
 
 function worker2(arr) {
-
   return Math.abs(Math.max(...arr) - Math.min(...arr));
 }
+
+
 function makeWork(arrOfArr, func) {
   let max = 0;
   for (let i = 0; i < arrOfArr.length; i++) {
-    worker2(arrOfArr[i]);
-    let func = worker2(arrOfArr[i]);
     if (max <= func) {
       max = func;
     }
