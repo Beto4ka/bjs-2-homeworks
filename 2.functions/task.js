@@ -1,7 +1,7 @@
 
 'use strict';
 
-function getArrayParams(myarr = [1, 5, 6, 2, 3]) {
+function getArrayParams(myarr) {
   let min = Infinity;
   let max = -Infinity;
   let sum = 0;
@@ -29,18 +29,17 @@ function worker(arr) {
   return sum;
 }
 
-function worker2(arr) {
-  return Math.abs(Math.max(...arr) - Math.min(...arr));
-}
-
-
 function makeWork(arrOfArr, func) {
   let max = 0;
   for (let i = 0; i < arrOfArr.length; i++) {
-    if (max <= func) {
-      max = func;
+    let sum = func(arrOfArr[i]);
+    if (max <= sum) {
+      max = sum;
     }
   }
   return max;
 }
 
+function worker2(arr) {
+  return Math.abs(Math.max(...arr) - Math.min(...arr));
+}
