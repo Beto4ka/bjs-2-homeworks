@@ -18,19 +18,19 @@ function getArrayParams(myarr) {
   }
 
   avg = + (sum / myarr.length).toFixed(2);
-  return { min, max, avg };
+  return { min: min, max: max, avg: avg };
 }
 
-function worker(arr) {
+function worker(myarr) {
   let sum = 0;
-  for (i = 0; i < arr.length; i++) {
-    sum += arr[i];
+  for (let i = 0; i < myarr.length; i++) {
+    sum += myarr[i];
   }
   return sum;
 }
 
 function makeWork(arrOfArr, func) {
-  let max = 0;
+  let max = -Infinity;
   for (let i = 0; i < arrOfArr.length; i++) {
     let sum = func(arrOfArr[i]);
     if (max <= sum) {
